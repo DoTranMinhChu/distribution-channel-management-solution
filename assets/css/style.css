@@ -150,8 +150,8 @@ p {
   z-index: 5;
   -webkit-transition: all 0.4s ease-out 0s;
   transition: all 0.4s ease-out 0s;
-  background: -webkit-gradient(linear, left top, right top, from(#33c8c1), color-stop(50%, #119bd2), to(#33c8c1));
-  background: linear-gradient(to right, #33c8c1 0%, #119bd2 50%, #33c8c1 100%);
+  background: -webkit-gradient(linear, left top, right top, from(#2980B9), color-stop(50%, #2980B9), to(#2980B9));
+  background: linear-gradient(to right, #2980B9 0%, #2980B9 50%, #2980B9 100%);
   background-size: 200%;
 }
 
@@ -169,8 +169,8 @@ p {
 
 /*===== All Section Title Style =====*/
 .section-title .line {
-  background: -webkit-gradient(linear, left top, left bottom, from(#fe8464), to(#fe6e9a));
-  background: linear-gradient(#fe8464 0%, #fe6e9a 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#2980B9), to(#2980B9));
+  background: linear-gradient(#2980B9 0%, #2980B9 100%);
   width: 150px;
   height: 5px;
   margin-bottom: 10px !important;
@@ -602,8 +602,8 @@ p {
 
 .navbar-btn .main-btn {
   line-height: 45px;
-  background: -webkit-gradient(linear, left top, right top, from(#fe8464), color-stop(50%, #fe6e9a), to(#fe8464));
-  background: linear-gradient(to right, #fe8464 0%, #fe6e9a 50%, #fe8464 100%);
+  background: -webkit-gradient(linear, left top, right top, from(#2980B9), color-stop(50%, #2980B9), to(#2980B9));
+  background: linear-gradient(to right, #2980B9 0%, #2980B9 50%, #2980B9 100%);
   background-size: 200%;
 }
 
@@ -953,8 +953,8 @@ p {
 }
 
 .about-content .main-btn {
-  background: -webkit-gradient(linear, left top, right top, from(#fe8464), color-stop(50%, #fe6e9a), to(#fe8464));
-  background: linear-gradient(to right, #fe8464 0%, #fe6e9a 50%, #fe8464 100%);
+  background: -webkit-gradient(linear, left top, right top, from(#2980B9), color-stop(50%, #2980B9), to(#2980B9));
+  background: linear-gradient(to right, #2980B9 0%, #2980B9 50%, #2980B9 100%);
   background-size: 200%;
   height: 50px;
   line-height: 50px;
