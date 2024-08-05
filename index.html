@@ -60,6 +60,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+/*            background-color: #2980B9;*/
         }
        /* .floating-button {
   position: fixed;
@@ -67,6 +68,23 @@
   right: 20px;
   z-index: 1000;
 }*/
+
+#floating-button1 {
+  background-color: #2980B9;
+  border: none;
+  padding: 15px 30px;
+  font-size: 18px;
+  color: white;
+  border-radius: 50px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+#floating-button1:hover {
+  background-color: #1F618D;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
 
 .floating-button .btn-primary {
   background-color: #2980B9;
@@ -3444,8 +3462,11 @@
     <script src="assets/js/main.js"></script>
 
 
+
+
+
   <div class="floating-button">
-        <button data-toggle="modal" data-target="#demoModal">Đăng ký Demo</button>
+        <button data-toggle="modal" data-target="#demoModal" id="floating-button1">Đăng ký Demo</button>
     </div>
 
     <div class="modal fade" id="demoModal" tabindex="-1" role="dialog" aria-labelledby="demoModalLabel" aria-hidden="true">
