@@ -719,7 +719,7 @@ p {
 }
 
 .header-hero-image img {
-  max-width: 650px;
+  max-width: 750px;
 }
 
 @media (max-width: 767px) {
