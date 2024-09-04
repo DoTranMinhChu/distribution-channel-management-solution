@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Get Device Info</title>
+</head>
+<body>
+  <h1>Device Info:</h1>
+  <p id="device-id"></p>
+
+  <script>
+    const deviceInfo = navigator.userAgent;
+    document.getElementById("device-id").textContent = `Device Info: ${deviceInfo}`;
+  </script>
+</body>
+</html>
