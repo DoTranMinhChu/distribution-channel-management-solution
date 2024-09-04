@@ -3,24 +3,33 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Unique Device ID</title>
+  <title>Device Information</title>
 </head>
 <body>
-  <h1>Device ID</h1>
+  <h1>Device Information</h1>
   <p id="device-id"></p>
+  <p id="os-info"></p>
+  <p id="browser-info"></p>
+  <p id="screen-size"></p>
 
   <script>
-    // Check if a unique ID is already stored in localStorage
+    // Tạo Device ID và lưu trữ vào localStorage
     let deviceId = localStorage.getItem('deviceId');
-    
-    // If not, generate a new one
     if (!deviceId) {
       deviceId = 'device-' + Math.random().toString(36).substr(2, 16);
       localStorage.setItem('deviceId', deviceId);
     }
 
-    // Display the unique ID
-    document.getElementById('device-id').textContent = `Your unique Device ID: ${deviceId}`;
+    // Lấy thông tin hệ điều hành và trình duyệt
+    const osInfo = navigator.platform;
+    const browserInfo = navigator.userAgent;
+    const screenSize = `${window.screen.width}x${window.screen.height}`;
+
+    // Hiển thị thông tin lên giao diện
+    document.getElementById('device-id').textContent = `Device ID: ${deviceId}`;
+    document.getElementById('os-info').textContent = `Operating System: ${osInfo}`;
+    document.getElementById('browser-info').textContent = `Browser Info: ${browserInfo}`;
+    document.getElementById('screen-size').textContent = `Screen Size: ${screenSize}`;
   </script>
 </body>
 </html>
