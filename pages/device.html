@@ -3,15 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Get Device Info</title>
+  <title>Unique Device ID</title>
 </head>
 <body>
-  <h1>Device Info:</h1>
+  <h1>Device ID</h1>
   <p id="device-id"></p>
 
   <script>
-    const deviceInfo = navigator.userAgent;
-    document.getElementById("device-id").textContent = `Device Info: ${deviceInfo}`;
+    // Check if a unique ID is already stored in localStorage
+    let deviceId = localStorage.getItem('deviceId');
+    
+    // If not, generate a new one
+    if (!deviceId) {
+      deviceId = 'device-' + Math.random().toString(36).substr(2, 16);
+      localStorage.setItem('deviceId', deviceId);
+    }
+
+    // Display the unique ID
+    document.getElementById('device-id').textContent = `Your unique Device ID: ${deviceId}`;
   </script>
 </body>
 </html>
