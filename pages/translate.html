@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trang HTML với Google Translate</title>
+    <title>Dịch nội dung với Google Cloud Translate API</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -22,10 +22,10 @@
     <!-- Selectbox để chọn ngôn ngữ -->
     <div class="language-selector">
         <label for="language">Chọn ngôn ngữ: </label>
-        <select id="language" onchange="translateLanguage()">
+        <select id="language" onchange="translateText()">
             <option value="">Chọn ngôn ngữ</option>
             <option value="en">English</option>
-            <option value="zh-CN">Chinese (Simplified)</option>
+            <option value="zh">Chinese (Simplified)</option>
             <option value="fr">French</option>
             <option value="ja">Japanese</option>
             <option value="ru">Russian</option>
@@ -33,35 +33,50 @@
         </select>
     </div>
 
-    <div class="content">
+    <!-- Nội dung cần dịch -->
+    <div class="content" id="content">
         <h1>Xin chào!</h1>
-        <p>Đây là một trang HTML đơn giản với tích hợp Google Translate. Bạn có thể sử dụng công cụ dịch để đổi ngôn ngữ của toàn bộ trang.</p>
-        <p>Nội dung này có thể được dịch sang nhiều ngôn ngữ khác nhau thông qua công cụ Google Dịch.</p>
+        <p>Đây là một trang HTML đơn giản với tích hợp Google Translate API. Bạn có thể sử dụng công cụ dịch để đổi ngôn ngữ của toàn bộ trang.</p>
+        <p>Nội dung này có thể được dịch sang nhiều ngôn ngữ khác nhau thông qua Google Cloud Translation API.</p>
     </div>
 
-    <!-- Google Translate Script -->
-    <div id="google_translate_element" style="display:none;"></div>
-    <script type="text/javascript">
-        function googleTranslateElementInit() {
-            new google.translate.TranslateElement({
-                pageLanguage: 'vi',
-                includedLanguages: 'en,zh-CN,fr,ja,ru,th',
-                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-            }, 'google_translate_element');
-        }
+    <!-- JavaScript to call Google Translation API -->
+    <script>
+        async function translateText() {
+            const text = document.getElementById('content').innerText;
+            const targetLanguage = document.getElementById('language').value;
 
-        function translateLanguage() {
-            var selectedLang = document.getElementById("language").value;
-            if (selectedLang) {
-                // Tạo URL để Google Translate xử lý ngôn ngữ
-                var translateURL = 'https://translate.google.com/translate?sl=vi&tl=' + selectedLang + '&u=' + window.location.href;
-                window.location.href = translateURL;
+            if (targetLanguage === "") {
+                alert("Vui lòng chọn ngôn ngữ!");
+                return;
+            }
+
+            // Replace this with your actual API key
+            const apiKey = 'AIzaSyB_pcYtjwsET9KxyoUBJW0DaJodx3N9MmI';
+
+            const url = `https://translation.googleapis.com/language/translate/v2?key=${apiKey}`;
+            const data = {
+                q: text,
+                target: targetLanguage,
+                source: 'vi'
+            };
+
+            try {
+                const response = await fetch(url, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(data)
+                });
+
+                const result = await response.json();
+                document.getElementById('content').innerHTML = result.data.translations[0].translatedText;
+            } catch (error) {
+                console.error("Có lỗi xảy ra khi dịch:", error);
             }
         }
     </script>
-
-    <!-- Load Google Translate Script -->
-    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 </body>
 </html>
