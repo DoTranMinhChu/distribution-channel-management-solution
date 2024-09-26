@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Menu</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet"> 
+  <style>
+    .contact-bar {
+      background-color: #4396D5; /* Màu xanh đậm cho thông tin liên hệ */
+      color: white;
+      padding: 10px 0;
+    }
+    .contact-bar a {
+      color: white;
+      margin-right: 15px;
+    }
+    .contact-bar a:hover {
+      color: #c0c0c0;
+    }
+    .navbar-custom {
+      background-color: #ffffff; /* Màu trắng cho menu */
+      padding: 10px 0;
+    }
+    .navbar-brand img{
+      max-height: 80px;
+    }
+    .navbar-custom .navbar-brand,
+    .navbar-custom .nav-link {
+      color: #4396D5; /* Màu xanh đậm cho text */
+    }
+    .navbar-custom .nav-link:hover {
+      color: #000000; /* Màu khi hover */
+    }
+    .navbar-custom .navbar-toggler {
+      border-color: rgba(85, 107, 47, 0.5); /* Màu của nút toggle */
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Thông tin liên hệ -->
+<section id="contact-bar-section">
+  <div class="contact-bar">
+    <div class="container d-flex justify-content-between">
+      <div>
+        <a href="mailto:support@tsagroup.vn"><i class="bi bi-envelope"></i> support@tsagroup.vn</a>
+      </div>
+      <div>
+        <a href="tel:0968627688"><i class="bi bi-telephone"></i> 0968627688</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- Thanh điều hướng -->
+  <nav class="navbar navbar-expand-lg navbar-custom">
+    <div class="container container-fluid">
+      <!-- Logo -->
+      <a class="navbar-brand" href="#"><img src="https://s3.ap-southeast-1.amazonaws.com/green-retail/production/image/38f132ef-5fbc-4b20-a2d4-9486ffa4ce7c"/></a>
+
+      <!-- Nút thu nhỏ trên di động -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Menu -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Trang chủ</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Giới thiệu</a>
+          </li>        
+          <li class="nav-item">
+            <a class="nav-link" href="#">Về chúng tôi</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Sản phẩm</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Chứng nhận</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Tin tức</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <style>
+    .banner-highlight {
+      background-color: #f8f9fa;
+      padding: 30px;
+      text-align: center;
+    }
+    .highlight-item {
+      margin-bottom: 15px;
+    }
+    .highlight-item i {
+      color: #28a745;
+      font-size: 24px;
+    }
+  </style>
+
+   <section id="bannerSection">
+    <div id="bannerCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#bannerCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#bannerCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#bannerCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="https://s3.ap-southeast-1.amazonaws.com/green-retail/production/image/3926e49a-bcbe-4235-ba90-2cacb328415f" class="d-block w-100" alt="Banner 1">
+        </div>
+        <div class="carousel-item">
+          <img src="https://s3.ap-southeast-1.amazonaws.com/green-retail/production/image/3926e49a-bcbe-4235-ba90-2cacb328415f" class="d-block w-100" alt="Banner 2">
+        </div>
+        <div class="carousel-item">
+          <img src="https://s3.ap-southeast-1.amazonaws.com/green-retail/production/image/3926e49a-bcbe-4235-ba90-2cacb328415f" class="d-block w-100" alt="Banner 3">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#bannerCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#bannerCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </section>
+
+  <!-- Section for the highlights -->
+  <section id="highlightsSection">
+    <div class="banner-highlight">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3 highlight-item">
+            <i class="bi bi-star-fill"></i>
+            <h5>Ưu đãi lớn</h5>
+            <p>Giá niêm yết rõ ràng</p>
+          </div>
+          <div class="col-md-3 highlight-item">
+            <i class="bi bi-truck"></i>
+            <h5>Giao hàng toàn quốc</h5>
+            <p>Nhanh chóng, an toàn</p>
+          </div>
+          <div class="col-md-3 highlight-item">
+            <i class="bi bi-credit-card"></i>
+            <h5>Thanh toán tiện lợi</h5>
+            <p>Thanh toán nhanh chóng</p>
+          </div>
+          <div class="col-md-3 highlight-item">
+            <i class="bi bi-bag-check"></i>
+            <h5>Mua sắm an toàn</h5>
+            <p>Sản phẩm an toàn, chất lượng</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+<style>
+    .section-title {
+      font-weight: bold;
+      color: #2d643d; /* Màu xanh cho tiêu đề */
+    }
+
+    .intro-section {
+      background-color: #f8f9fa;
+      padding: 50px 20px;
+      border-radius: 10px;
+    }
+
+    .vision-mission i {
+      font-size: 36px;
+      color: #28a745; /* Màu biểu tượng */
+    }
+
+    .vision-mission h5 {
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    .vision-mission p {
+      font-size: 14px;
+      color: #6c757d;
+    }
+
+    .product-section img {
+      max-width: 100%;
+      border-radius: 10px;
+    }
+  </style>
+
+   <!-- Giới thiệu công ty -->
+  <section class="intro-section">
+    <div class="container">
+      <div class="row align-items-center">
+        <!-- Phần giới thiệu bên trái -->
+        <div class="col-md-6">
+          <span class="badge bg-success">Giới thiệu chung</span>
+          <h2 class="section-title mt-3">Công ty CP quốc tế Tân Sơn Anh (TSA group)</h2>
+          <p>
+            Công ty Cổ phần Quốc tế Tân Sơn Anh (TSA group) được thành lập vào tháng 3 năm 2020. TSA Group là một trong những công ty Việt Nam hoạt động trong lĩnh vực thực phẩm dinh dưỡng, nâng cao sức khoẻ.
+          </p>
+          <div class="vision-mission mt-4">
+            <div class="d-flex align-items-start">
+              <i class="bi bi-bar-chart-fill me-3"></i>
+              <div>
+                <h5>Tầm nhìn</h5>
+                <p>Kết nối cộng đồng, nâng tầm cuộc sống</p>
+              </div>
+            </div>
+            <div class="d-flex align-items-start mt-4">
+              <i class="bi bi-heart-fill me-3"></i>
+              <div>
+                <h5>Sứ mệnh</h5>
+                <p>Nâng tầm thảo dược Việt, phổ cập thảo dược của người Việt đến tay người Việt trên khắp đất nước và vươn ra thế giới</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Phần sản phẩm bên phải -->
+        <div class="col-md-6 text-center product-section">
+          <img src="https://tsagroup.vn/wp-content/uploads/2021/02/logo-TSAGROUP-ngang_2_PNG-1024x416.png" alt="Sản phẩm Tỏi đen Hồng Sâm Ngọc Linh">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <style>
+
+    .value-section {
+      padding: 50px 0;
+      background-color: #f8f9fa; /* Nền nhạt */
+    }
+
+    .value-card {
+      border: none;
+      border-radius: 15px;
+      overflow: hidden;
+      background-color: #ffffff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Hiệu ứng đổ bóng */
+    }
+
+    .value-card img {
+      width: 100%;
+      height: auto;
+      border-bottom: 4px solid #2d643d; /* Đường kẻ dưới ảnh */
+    }
+
+    .value-card h5 {
+      font-weight: bold;
+      color: #333;
+      margin-top: 15px;
+    }
+
+    .value-card p {
+      font-size: 14px;
+      color: #6c757d;
+    }
+  </style>
+
+
+
+  <!-- Section giới thiệu vì sao chọn chúng tôi -->
+  <section class="value-section">
+    <div class="container">
+      <div class="text-center mb-4">
+        <span class="badge bg-success">Sản phẩm lõi</span>
+        <h3 class="section-title mt-3">Vì sao nên chọn sản phẩm Tái sinh khớp</h3>
+      </div>
+
+      <div class="row">
+        <!-- Card 1 -->
+        <div class="col-md-4 mb-4">
+          <div class="card value-card">
+            <img src="https://caygiongvinhphuc.com/wp-content/uploads/2020/06/cu-sam-ngoc-linh.jpg" alt="Hình ảnh 1">
+            <div class="card-body">
+              <h5 class="card-title">Nguyên liệu chất lượng, uy tín</h5>
+              <p class="card-text">Sâm Ngọc Linh có nhiều tác dụng tích cực đối với sức khỏe, bao gồm cả việc hỗ trợ xương khớp.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="col-md-4 mb-4">
+          <div class="card value-card">
+            <img src="https://cafebiz.cafebizcdn.vn/162123310254002176/2023/12/6/photo-1701825553838-17018255544901571809025-1701832155032-17018321551941603335984.jpg" alt="Hình ảnh 2">
+            <div class="card-body">
+              <h5 class="card-title">Khả năng chống viêm</h5>
+              <p class="card-text">Sâm Ngọc Linh có các công dụng chính cho xương khớp: chống viêm, giảm đau và sưng; tăng cường sức mạnh và độ bền của xương nhờ acid amin và khoáng chất; chống oxy hóa, bảo vệ tế bào xương khỏi tổn thương; và cải thiện tuần hoàn máu, hỗ trợ phục hồi và tái tạo mô xương, khớp.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="col-md-4 mb-4">
+          <div class="card value-card">
+            <img src="https://www.cantiendat.com/images/upload/ban-thuong-cai-thien-suc-khoe-ban-than-nhu-the-nao-_1660523806.jpg" alt="Hình ảnh 3">
+            <div class="card-body">
+              <h5 class="card-title">Cải thiện sức khỏe</h5>
+              <p class="card-text">Cải thiện vi tuần hoàn tại chỗ, hoạt huyết, phá ứ huyết, tán hàn làm ấm kinh mạch, thông kinh lạc, khu phong trừ thấp, điều hoà kinh lạc, làm giãn mao mạch, giúp máu lưu thông, phòng ngừa các bệnh về tắc tĩnh mạch, phù chân tay.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+   <style>
+    .product-card {
+      border: none;
+      background-color: #f8f9fa;
+      border-radius: 10px;
+      text-align: center;
+      padding: 15px;
+    }
+
+    .product-card img {
+      width: 100%;
+      height: auto;
+      max-width: 250px; /* Điều chỉnh kích thước ảnh */
+      margin: 10px 0;
+    }
+
+    .product-card .product-price {
+      color: red;
+      font-weight: bold;
+    }
+
+    .badge-new {
+      background-color: red;
+      color: white;
+      font-size: 12px;
+      padding: 5px;
+      border-radius: 5px;
+      position: absolute;
+      top: 10px;
+      left: 10px;
+    }
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+      background-color: #000;
+      border-radius: 50%;
+    }
+
+    .carousel-indicators {
+      display: none; /* Ẩn các dấu chấm */
+    }
+  </style>
+
+
+   <!-- Section cho sản phẩm biệt -->
+  <section class="product-section py-5">
+    <div class="container">
+      <div class="text-center mb-4">
+        <span class="badge bg-success">Sản phẩm</span>
+        <h2 class="section-title mt-3">Tái sinh khớp</h2>
+      </div>
+
+      <div id="productCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="row">
+              <!-- Product 1 -->
+              <div class="col-md-4">
+                <div class="product-card position-relative">
+                  <span class="badge-new">HOT</span>
+                  <img src="https://s3.ap-southeast-1.amazonaws.com/green-retail/production/image/064e10d7-1060-4f42-b289-ca5d703e3157" alt="Tái sinh khớp 10ml">
+                  <h5>Tái sinh khớp 10ml</h5>
+                  <p class="product-price">99.000đ</p>
+                </div>
+              </div>
+              <!-- Product 2 -->
+              <div class="col-md-4">
+                <div class="product-card position-relative">
+                  <span class="badge-new">HOT</span>
+                  <img src="https://i.imgur.com/mQCMguA.jpg" alt="Tái sinh khớp 50ml">
+                  <h5>Tái sinh khớp 50ml</h5>
+                  <p class="product-price">360.000đ</p>
+                </div>
+              </div>
+              <!-- Product 3 -->
+              <div class="col-md-4">
+                <div class="product-card position-relative">
+                  <span class="badge-new">HOT</span>
+                  <img src="https://i.imgur.com/j5WNU35.jpg" alt="Tái sinh khớp 100ml">
+                  <h5>Tái sinh khớp 100ml</h5>
+                  <p class="product-price">560.000đ</p>
+                </div>
+              </div>              
+            </div>
+          </div>
+          <!-- Slide 2 -->
+         <!--  <div class="carousel-item">
+            <div class="row"> -->
+              <!-- Thêm sản phẩm khác nếu cần -->
+              <!-- Product 5, 6, 7, 8 -->
+            <!-- </div>
+          </div> -->
+        </div>
+
+        <!-- Nút điều khiển carousel -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#productCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+
+ <style>
+    .video-section {
+      background-color: #f8f9fa;
+      padding: 50px 0;
+      text-align: center;
+    }
+
+    .video-section img {
+      width: 100%;
+      max-width: 600px;
+      border-radius: 10px;
+    }
+
+    .video-section .btn-play {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 50px;
+      color: white;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 20px;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+
+    .certification-section {
+      background-color: #fff;
+      padding: 50px 0;
+    }
+
+    .certification-section img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .certification-section h2 {
+      font-weight: bold;
+      margin-bottom: 40px;
+      text-align: center;
+    }
+
+    .badge-custom {
+      background-color: #28a745;
+      color: white;
+      font-size: 14px;
+      padding: 5px 10px;
+      border-radius: 5px;
+    }
+  </style>
+
+   <!-- Section cho video -->
+  <section class="video-section position-relative">
+  <div class="container">
+    <h2 class="section-title mt-3">Video giới thiệu sản phẩm</h2>
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <!-- Nhúng video YouTube -->
+        <div class="ratio ratio-16x9">
+          <iframe 
+            src="https://www.youtube.com/embed/G57nLItUqs0?autoplay=1&mute=1&rel=0"
+            title="Video giới thiệu sản phẩm"
+            allow="autoplay; encrypted-media"
+            allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</section>
+
+  </section>
+
+  <!-- Section cho chứng nhận -->
+  <section class="certification-section">
+    <div class="container">
+      <div class="text-center mb-4">
+        <span class="badge badge-custom">Chứng chỉ</span>
+        <h2>Chứng nhận của chúng tôi</h2>
+      </div>
+
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <img src="../assets/images/tsa/tsa_cn_1.png" alt="Chứng nhận 1" class="img-fluid">
+        </div>
+        <div class="col-md-4 mb-4">
+          <img src="../assets/images/tsa/tsa_cn_2.png" alt="Chứng nhận 2" class="img-fluid">
+        </div>
+        <div class="col-md-4 mb-4">
+          <img src="../assets/images/tsa/tsa_cn_3.png" alt="Chứng nhận 3" class="img-fluid">
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+    <style>
+    .testimonial-section {
+      background-color: #f8f9fa;
+      padding: 50px 0;
+    }
+
+    .testimonial-card {
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      position: relative;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      margin-bottom: 30px;
+    }
+
+    .testimonial-card .quote-icon {
+      font-size: 40px;
+      color: #28a745; /* Màu xanh cho biểu tượng quote */
+      background-color: #ffffff;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      line-height: 60px;
+      position: absolute;
+      top: -30px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .testimonial-text {
+      font-size: 16px;
+      font-style: italic;
+      color: #6c757d;
+      margin-top: 30px;
+    }
+
+    .client-info {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .client-info img {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+    }
+
+    .client-info h5 {
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    .client-info p {
+      color: #28a745;
+      font-size: 14px;
+      margin: 0;
+    }
+
+    .badge-custom {
+      background-color: #28a745;
+      color: white;
+      font-size: 14px;
+      padding: 5px 10px;
+      border-radius: 5px;
+    }
+
+  </style>
+
+  <!-- Section cho nhận xét khách hàng -->
+  <section class="testimonial-section">
+    <div class="container">
+      <div class="text-center mb-5">
+        <!-- <span class="badge badge-custom">Sản phẩm</span> -->
+        <h2 class="section-title mt-3">Phản hồi khách hàng</h2>
+      </div>
+
+      <div class="row justify-content-center">
+        <!-- Testimonial 1 -->
+        <div class="col-md-4">
+          <div class="testimonial-card">
+            <div class="quote-icon">❝</div>
+            <p class="testimonial-text">
+              Sản phẩm rất tốt, mình làm bên phòng khám khách hàng rất tin tưởng và đánh giá cao chất lượng dầu tái sinh khớp của Tân Sơn Anh
+            </p>
+            <div class="client-info">
+              <img src="https://www.svgrepo.com/show/382095/female-avatar-girl-face-woman-user-4.svg" alt="Client 1">
+              <h5>Chị Vi Thương</h5>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="col-md-4">
+          <div class="testimonial-card">
+            <div class="quote-icon">❝</div>
+            <p class="testimonial-text">
+              Khách hàng mua lại sản phẩm dầu rất nhiều, cải thiện được tình trạng xương khớp cho họ
+            </p>
+            <div class="client-info">
+              <img src="https://www.svgrepo.com/show/382095/female-avatar-girl-face-woman-user-4.svg" alt="Client 2">
+              <h5>Cô Hương</h5>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="col-md-4">
+          <div class="testimonial-card">
+            <div class="quote-icon">❝</div>
+            <p class="testimonial-text">
+              Chị làm việc xoa bóp bấm huyệt kết hợp cùng dầu tái sinh khớp cho khách , việc trị liệu diễn ra rất tốt, khách tin dùng và còn hỏi mua sản phẩm.
+            </p>
+            <div class="client-info">
+              <img src="https://www.svgrepo.com/show/382095/female-avatar-girl-face-woman-user-4.svg" alt="Client 3">
+              <h5>Chị Thùy</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <style>
+    .news-section {
+      padding: 50px 0;
+      background-color: #f8f9fa;
+    }
+
+    .news-card {
+      position: relative;
+      overflow: hidden;
+      border-radius: 15px;
+      transition: transform 0.3s;
+    }
+
+    .news-card img {
+      width: 100%;
+      height: auto;
+      border-radius: 15px;
+      transition: transform 0.3s ease;
+    }
+
+    .news-card:hover img {
+      transform: scale(1.05);
+    }
+
+    .news-content {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+      background-color: #28a745;
+      border-radius: 50%;
+      padding: 10px;
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+      width: 50px;
+    }
+  </style>
+
+    <!-- Section cho Tin tức -->
+  <section class="news-section">
+    <div class="container">
+      <div class="text-center mb-4">
+        <span class="badge bg-success">Tin tức</span>
+        <h2 class="section-title mt-3">Tin tức về chúng tôi</h2>
+      </div>
+
+      <div id="newsCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <!-- Slide 1 -->
+          <div class="carousel-item active">
+            <div class="row">
+              <!-- News 1 -->
+              <div class="col-md-4">
+                <div class="news-card">
+                  <img src="https://s3.ap-southeast-1.amazonaws.com/green-retail/production/image/a0d38726-590a-440e-a532-8af11ccf22a9" alt="Tin tức 1">
+                  <div class="news-content">
+                    <p>Hoạt động công ty</p>
+                  </div>
+                </div>
+              </div>
+              <!-- News 2 -->
+              <div class="col-md-4">
+                <div class="news-card">
+                  <img src="https://s3.ap-southeast-1.amazonaws.com/green-retail/production/image/a0d38726-590a-440e-a532-8af11ccf22a9" alt="Tin tức 2">
+                  <div class="news-content">
+                    <p>Khai trương chi nhánh</p>
+                  </div>
+                </div>
+              </div>
+               <!-- News 2 -->
+              <div class="col-md-4">
+                <div class="news-card">
+                  <img src="https://s3.ap-southeast-1.amazonaws.com/green-retail/production/image/a0d38726-590a-440e-a532-8af11ccf22a9" alt="Tin tức 2">
+                  <div class="news-content">
+                    <p>Khai trương chi nhánh</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>        
+        </div>
+
+        <!-- Nút điều khiển carousel -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#newsCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#newsCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+
+            <!-- TikTok Video Grid -->
+  <section class="contact-section">
+    <div class="container"> 
+        <div class="row">
+            <div class="col-md-4 col-sm-6 mb-4">
+                <div class="video-card">
+                    <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@tansonanh/video/6982486464328191259" data-video-id="6982486464328191259" style="max-width: 605px;min-width: 325px;" >
+                        <section> </section>
+                    </blockquote> 
+                    <script async src="https://www.tiktok.com/embed.js"></script>
+                    <div class="video-info">
+                        <!-- <p>Chọn Đường nào cũng được, bạn khỏe là được</p> -->
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 mb-4">
+                <div class="video-card">
+                    <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@tansonanh/video/6966511158861909249" data-video-id="6966511158861909249" style="max-width: 605px;min-width: 325px;" >
+                        <section> </section>
+                    </blockquote> 
+                    <script async src="https://www.tiktok.com/embed.js"></script>
+                    <div class="video-info">
+                        <!-- <p>Loài hoa có nhiều mật nhất thế giới</p> -->
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 mb-4">
+                <div class="video-card">
+                    <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@tansonanh/video/6958793319476448513" data-video-id="6958793319476448513" style="max-width: 605px;min-width: 325px;" >
+                        <section> </section>
+                    </blockquote> 
+                    <script async src="https://www.tiktok.com/embed.js"></script>
+                    <div class="video-info">
+                        <!-- <p>Nước tương Mật hoa dừa Sokfarm 500ml, chai lớn hơn</p> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </section>
+
+  <style>
+    .contact-section {
+      padding: 50px 0;
+    }
+
+    .contact-info {
+      font-size: 16px;
+    }
+
+    .contact-info h2 {
+      font-weight: bold;
+    }
+
+    .contact-info p {
+      margin-bottom: 20px;
+    }
+
+    .contact-info i {
+      font-size: 20px;
+      margin-right: 10px;
+      color: #28a745;
+    }
+
+    .form-contact {
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-contact .btn-submit {
+      background-color: #28a745;
+      color: white;
+      width: 100%;
+      padding: 10px;
+      border-radius: 5px;
+    }
+
+    .badge-custom {
+      background-color: #28a745;
+      color: white;
+      font-size: 14px;
+      padding: 5px 10px;
+      border-radius: 5px;
+    }
+
+    /* Custom responsive padding */
+    @media (max-width: 768px) {
+      .contact-info {
+        text-align: center;
+      }
+
+      .form-contact {
+        margin-top: 30px;
+      }
+    }
+  </style>
+
+    <!-- Section liên hệ -->
+  <section class="contact-section">
+    <div class="container">
+      <div class="row align-items-center">
+        <!-- Thông tin liên hệ bên trái -->
+        <div class="col-md-6 contact-info">
+          <span class="badge badge-custom">Liên hệ</span>
+          <h2 class="mt-3">Liên hệ với chúng tôi</h2>
+          <p><i class="bi bi-envelope"></i>Email: support@tsagroup.vn</p>
+          <p><i class="bi bi-telephone"></i>Số điện thoại: 0968627688</p>
+          <p><i class="bi bi-geo-alt"></i>Địa chỉ: 441/8 Điện Biên Phủ, phường 25, Quận Bình Thạnh, Tp.HCM</p>
+          <p><i class="bi bi-file-earmark-text"></i>Mã số thuế: 0316218073</p>
+        </div>
+
+        <!-- Form liên hệ bên phải -->
+        <div class="col-md-6">
+          <div class="form-contact">
+            <h4 class="text-center mb-4">Gửi yêu cầu liên hệ</h4>
+            <form>
+              <div class="mb-3">
+                <label for="name" class="form-label">Họ và tên</label>
+                <input type="text" class="form-control" id="name" placeholder="Nhập họ tên">
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="Nhập email">
+              </div>
+              <div class="mb-3">
+                <label for="phone" class="form-label">Số điện thoại</label>
+                <input type="tel" class="form-control" id="phone" placeholder="Nhập số điện thoại">
+              </div>
+              <div class="mb-3">
+                <label for="message" class="form-label">Nội dung</label>
+                <textarea class="form-control" id="message" rows="5" placeholder="Nhập nội dung"></textarea>
+              </div>
+              <button type="submit" class="btn btn-submit">Gửi yêu cầu</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
